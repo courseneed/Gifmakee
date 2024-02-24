@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blogger GIF Maker</title>
+  <style>
+    /* Add your CSS styling for the tool here */
+  </style>
+</head>
+<body>
+  <h1>GIF Maker</h1>
+  <input type="file" id="imageUpload" multiple accept="image/*">
+  <div id="options">
+    <h2>Options</h2>
+    <label for="resizeWidth">Width:</label> <input type="number" id="resizeWidth"> <br>
+    <label for="resizeHeight">Height:</label> <input type="number" id="resizeHeight"> <br>
+    <label for="filterSelect">Filter:</label>
+    <select id="filterSelect">
+      <option value="none">None</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="invert">Invert</option>
+      </select> <br>
+    <label for="frameDuration">Frame Duration (ms):</label> <input type="range" id="frameDuration" min="50" max="500" step="50"> 
+    <br>
+    <label for="infiniteLoop">Infinite Loop:</label> <input type="checkbox" id="infiniteLoop"> 
+  </div>
+  <button id="createGif">Create GIF</button>
+  <div id="preview"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jimp@latest/browser/lib/jimp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gifshot@latest/dist/gifshot.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
